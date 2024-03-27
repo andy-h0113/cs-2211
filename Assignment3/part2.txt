@@ -1,0 +1,36 @@
+Files 
+1. I could use the "dir" to view the files. This command works because it is meant to list all files and directories in the current working directory.
+2. To get prompted before a file is deleted, you can add the option "-i". If you do not want to get prompted you can add the option "-f".
+    If both options are used simultaneously, the order determines precedence. The second option added will take precedence.
+3. A difference between mv and rename is that you can use rename to easily rename a variety of files at once, instead of the "mv" command where
+    you can only rename one file at a time (using the basic command at least). Another difference is that the rename command cannot move files into
+    directories while the mv command can.
+4. ELF stands for Executable and Linking Format which is a standard file format for executable files, object code, shared libraries, and core dumps.
+    In this situation, it shows that the file is an executable file of the format ELF.
+5. ls -l shows the size of the file in bytes while the du command shows the space occupied by the file on the disk, so the disk space taken up by the 
+    file is slightly greater than the size of the file.
+
+Directories
+1. You can add the option "-p" to the mkdir command and then add the file path you would like to make. Instead of producing an error, it will create all the parent directories for child.
+    ie. mkdir -p grandparent/parent/child
+2. You can make a directory with a space in it by surrounding the directory name with quotes when creating the directory. The same applies for removing the
+    directory, where you use the same command and surround the file name with quotes.
+3. Add the option "-m500"
+    eg. mkdir -m500 testFile
+4. Use the command: cd -
+    This will return you to your previous directory location.
+5. You can use the "dirs" command to check what directories are in your stack. If you want the 6th folder down in the stack, you just need to count 6 files down from
+    the left side (top of stack when printed with dirs). You can copy the the location of the 6th folder from the dirs command you inputted earilier. You can then paste that
+    the cd command to quickly cd to your desired location.
+
+Permissions
+1. Add the "-c" option. This will print modifications when they are made.
+2. chwon --reference=file1 file2
+    Add the --reference option, indicated the reference file as file1 so it can apply file1's ownership to file2
+3. Add option "--printf='%A, %G, %U'"
+    This will display the permissions, group ownership, and user ownership respectively. This can also be formatted as need.
+    eg. stat --printf='Permissions: %A\nGroup Ownership: %G\nUser Ownership: %U' testFile
+4. chmod g=w fileName
+    This command will still let users write to the file, but not perform any other operations on it.
+5. If you omit the symbol, it adds the permissions to all groups (user, group, other) by default.
+
